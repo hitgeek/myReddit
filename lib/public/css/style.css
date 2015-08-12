@@ -1,0 +1,33 @@
+.wrapper {
+  margin-top: 40px;
+}
+
+.form-signup {
+  max-width: 300px;
+  margin: 50px auto 0px auto;
+}
+
+.link {
+  text-align: center;
+}
+
+.link img {
+  height: 150px;
+  margin: auto;
+}
+
+.btn-fav {
+  margin-right: 10px;
+}
+
+.btn-fav:hover {
+  cursor: pointer;
+}
+
+.btn-hate {
+  margin-right: 10px;
+}
+
+.btn-hate:hover {
+  cursor: pointer;
+}

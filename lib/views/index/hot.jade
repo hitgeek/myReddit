@@ -1,0 +1,25 @@
+extends ../_layouts/layout
+
+block content
+  .row
+    .col-lg-12
+      h1.page-header= title
+    each link, index in links
+      if index % 3 == 0
+        .row
+          each x in links.slice(index, index + 3)
+            .col-md-4.link
+              .btn-group.pull-right.btn-fav(data-name=x.data.name)
+                if (user.favs.indexOf(x.data.name) != -1)
+                  a: i.fa.fa-star.fa-2x
+                else
+                  a: i.fa.fa-star-o.fa-2x
+              br
+              if (/\.(gif|jpg|jpeg|tiff|png)$/i).test(x.data.thumbnail)
+                img.img-thumbnail.img-responsive(src=x.data.thumbnail, alt='')
+              else
+                img.img-responsive(src="/favicon.ico", alt='')
+              h5
+                a(href=x.data.url)= x.data.title
+              
+        hr
